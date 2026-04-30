@@ -2,71 +2,581 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy - Rokad Flow</title>
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: Arial, sans-serif;
       max-width: 900px;
       margin: auto;
-      padding: 20px;
-      line-height: 1.6;
+      padding: 30px 20px;
+      line-height: 1.7;
+      color: #333;
+      background-color: #f9f9f9;
     }
-    h1, h2 {
+
+    h1 {
       color: #008080;
+      font-size: 28px;
+      margin-bottom: 6px;
+    }
+
+    h2 {
+      color: #008080;
+      font-size: 20px;
+      margin-top: 36px;
+      margin-bottom: 10px;
+      border-left: 4px solid #008080;
+      padding-left: 10px;
+    }
+
+    h3 {
+      color: #006666;
+      font-size: 16px;
+      margin-top: 18px;
+      margin-bottom: 6px;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    ul {
+      margin: 8px 0 12px 22px;
+    }
+
+    ul li {
+      margin-bottom: 6px;
+    }
+
+    .effective-date {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+
+    .section-box {
+      background: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-top: 16px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 14px 0;
+      font-size: 14px;
+    }
+
+    table th {
+      background-color: #008080;
+      color: white;
+      padding: 10px 12px;
+      text-align: left;
+    }
+
+    table td {
+      padding: 9px 12px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    table tr:nth-child(even) td {
+      background-color: #f4fafa;
+    }
+
+    .badge-no {
+      color: #cc0000;
+      font-weight: bold;
+    }
+
+    .badge-yes {
+      color: #008080;
+      font-weight: bold;
+    }
+
+    .highlight-box {
+      background: #f0fafa;
+      border: 1px solid #b2dfdb;
+      border-radius: 6px;
+      padding: 14px 18px;
+      margin: 12px 0;
+      font-size: 14px;
+    }
+
+    .highlight-box code {
+      display: block;
+      background: #e8f5f5;
+      padding: 10px 14px;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 13px;
+      margin-top: 8px;
+      white-space: pre-wrap;
+    }
+
+    .do-not-list li::before {
+      content: "❌ ";
+    }
+
+    .can-list li::before {
+      content: "✅ ";
+    }
+
+    .contact-box {
+      background: #008080;
+      color: white;
+      border-radius: 8px;
+      padding: 18px 24px;
+      margin-top: 16px;
+    }
+
+    .contact-box a {
+      color: #aaffee;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 13px;
+      color: #999;
+      text-align: center;
     }
   </style>
 </head>
 <body>
 
-<h1>Privacy Policy for Rokad Flow</h1>
-<p><strong>Effective Date:</strong> 2026</p>
+  <h1>Privacy Policy for Rokad Flow</h1>
+  <p class="effective-date"><strong>Effective Date:</strong> July 2025 &nbsp;|&nbsp;
+    <strong>Last Updated:</strong> July 2025 &nbsp;|&nbsp;
+    <strong>Developer:</strong> Shaani Soft Solutions
+  </p>
 
-<h2>1. Introduction</h2>
-<p>Rokad Flow is a personal finance management application designed to help users track income, expenses, and financial activities.</p>
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- 1. Introduction -->
+  <!-- ═══════════════════════════════════════════ -->
+  <h2>1. Introduction</h2>
+  <div class="section-box">
+    <p>
+      Rokad Flow is a personal finance management application designed to help
+      users track income, expenses, accounts, and financial activities — all
+      stored privately on your own device.
+    </p>
+    <p>
+      We respect your privacy and are fully committed to protecting your data.
+      This Privacy Policy explains what data is handled, how it is stored, and
+      what controls you have over it.
+    </p>
+    <p>
+      <strong>Rokad Flow does not collect, transmit, or share your personal
+      financial data with us or any third party.</strong>
+    </p>
+  </div>
 
-<p>We respect your privacy and are committed to protecting your data. This Privacy Policy explains how your information is handled.</p>
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- 2. Data Collection -->
+  <!-- ═══════════════════════════════════════════ -->
+  <h2>2. Data Collection</h2>
+  <div class="section-box">
+    <p>Rokad Flow is an <strong>offline-first</strong> application.</p>
+    <p>
+      All financial data — including expenses, income, accounts, categories,
+      and notes — is stored <strong>locally on your device only</strong>.
+    </p>
+    <p>We do <strong>not</strong> collect, store, or transmit your financial
+      data to our servers.</p>
 
-<h2>2. Data Collection</h2>
-<p>Rokad Flow is an offline-first application.</p>
-<p>All financial data including expenses, income, categories, and notes is stored locally on your device only.</p>
-<p>We do not collect, store, or transmit your financial data to our servers.</p>
+    <table>
+      <tr>
+        <th>Data Type</th>
+        <th>Purpose</th>
+        <th>Stored Where</th>
+      </tr>
+      <tr>
+        <td>Transaction records</td>
+        <td>Your income &amp; expense entries</td>
+        <td>Device only</td>
+      </tr>
+      <tr>
+        <td>Account information</td>
+        <td>Wallet / account names &amp; balances</td>
+        <td>Device only</td>
+      </tr>
+      <tr>
+        <td>Category data</td>
+        <td>Custom spending categories</td>
+        <td>Device only</td>
+      </tr>
+      <tr>
+        <td>Backup files (.db)</td>
+        <td>Local backup copies of your data</td>
+        <td>Device storage only</td>
+      </tr>
+    </table>
+  </div>
 
-<h2>3. Google Drive Backup</h2>
-<p>The app provides an optional backup feature using Google Drive.</p>
-<ul>
-<li>Users can sign in with their Google account</li>
-<li>Backup is stored in appDataFolder (private folder)</li>
-</ul>
-<p>We do not access or store your data on our servers.</p>
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- 3. Backup Feature -->
+  <!-- ═══════════════════════════════════════════ -->
+  <h2>3. Backup &amp; Restore Feature</h2>
+  <div class="section-box">
 
-<h2>4. Advertising</h2>
-<p>The app uses Google AdMob to display ads.</p>
-<p>AdMob may collect device information, advertising ID, IP address, and interaction data.</p>
+    <h3>3.1 Local Backup</h3>
+    <p>
+      All backups are created <strong>entirely on your device</strong>.
+      No data is sent to any server, cloud service, or third party.
+    </p>
+    <p>Backup files are saved to:</p>
+    <div class="highlight-box">
+      <code>
+Android 10+ (SDK 29+) :
+  /Android/data/com.shaani.rokadflow/files/backups/
+  (No special permission required)
 
-<h2>5. File Access</h2>
-<p>The app allows users to select backup files manually. No files are accessed without user action.</p>
+Android 9 and below (SDK 28-) :
+  /storage/emulated/0/Download/RokadFlow/backups/
+  (WRITE_EXTERNAL_STORAGE permission used)
 
-<h2>6. Permissions</h2>
-<p>Storage: for backup and restore</p>
-<p>Internet: for Google Drive and ads</p>
+iOS :
+  App Documents folder
+  (Accessible via Files app)
+      </code>
+    </div>
 
-<h2>7. Data Sharing</h2>
-<p>We do not share your data with third parties.</p>
+    <h3>3.2 Restore Feature</h3>
+    <p>
+      Restore reads a <code>.db</code> backup file
+      <strong>from your device only</strong>. You can select any
+      <code>.db</code> backup file using the system file picker.
+      No internet connection is required or used during restore.
+    </p>
+    <p>
+      Before every restore, the app automatically creates a
+      <strong>safety pre-restore backup</strong> so your current data
+      is never lost.
+    </p>
 
-<h2>8. Data Security</h2>
-<p>Your data is stored locally or in your Google Drive account.</p>
+    <h3>3.3 Backup File Management</h3>
+    <ul>
+      <li>The app keeps the last <strong>10 manual backups</strong>
+        and auto-deletes older ones</li>
+      <li>Auto-backup creates a single overwritten file
+        (no storage waste)</li>
+      <li>You can view, restore, or delete any backup from within the app</li>
+      <li>Backup files remain on your device even after uninstalling
+        the app (Android Downloads folder)</li>
+    </ul>
 
-<h2>9. User Control</h2>
-<p>You can delete your data anytime by uninstalling the app or removing backups.</p>
+    <h3>3.4 What We Do NOT Do</h3>
+    <ul class="do-not-list">
+      <li>We do NOT upload your data to any server</li>
+      <li>We do NOT access your backups remotely</li>
+      <li>We do NOT share your financial data with anyone</li>
+      <li>We do NOT use your data for analytics or advertising</li>
+      <li>We do NOT sell your data</li>
+      <li>We do NOT request MANAGE_EXTERNAL_STORAGE permission</li>
+    </ul>
 
-<h2>10. Children’s Privacy</h2>
-<p>Not intended for children under 13.</p>
+  </div>
 
-<h2>11. Changes</h2>
-<p>We may update this policy anytime.</p>
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- 4. Google Drive Backup -->
+  <!-- ═══════════════════════════════════════════ -->
+  <h2>4. Google Drive Backup (Optional)</h2>
+  <div class="section-box">
+    <p>
+      The app provides an <strong>optional</strong> cloud backup feature
+      using Google Drive.
+    </p>
+    <ul>
+      <li>Users can sign in with their Google account to enable this feature</li>
+      <li>Backup files are stored in your personal
+        <strong>Google Drive appDataFolder</strong> — a private folder
+        only your app can access</li>
+      <li>We do <strong>not</strong> access or store your data on our
+        own servers</li>
+      <li>Google Drive usage is governed by
+        <a href="https://policies.google.com/privacy" target="_blank">
+          Google's Privacy Policy</a></li>
+      <li>You can revoke Google Drive access anytime from your
+        Google Account settings</li>
+    </ul>
+  </div>
 
-<h2>12. Contact</h2>
-<p>shaanisoftsolutions@gmail.com</p>
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- 5. Advertising -->
+  <!-- ═══════════════════════════════════════════ -->
+  <h2>5. Advertising</h2>
+  <div class="section-box">
+    <p>
+      The app uses <strong>Google AdMob</strong> to display advertisements.
+      AdMob may collect the following to serve relevant ads:
+    </p>
+    <ul>
+      <li>Device information (device model, OS version)</li>
+      <li>Advertising ID</li>
+      <li>IP address</li>
+      <li>Ad interaction data (clicks, impressions)</li>
+    </ul>
+    <p>
+      This data is collected and processed by Google, not by us.
+      For more information, see
+      <a href="https://policies.google.com/privacy" target="_blank">
+        Google's Privacy Policy</a>.
+    </p>
+    <p>
+      You can opt out of personalized ads by adjusting your device's
+      ad settings:
+    </p>
+    <ul>
+      <li><strong>Android:</strong> Settings → Google → Ads →
+        Opt out of Ads Personalization</li>
+      <li><strong>iOS:</strong> Settings → Privacy →
+        Tracking → Disable</li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- 6. File Access -->
+  <!-- ═══════════════════════════════════════════ -->
+  <h2>6. File Access</h2>
+  <div class="section-box">
+    <p>
+      The app allows users to <strong>manually select</strong> backup files
+      using the system file picker (Storage Access Framework).
+    </p>
+    <ul>
+      <li>No files are accessed without explicit user action</li>
+      <li>File access is limited to the selected backup file only</li>
+      <li>The app only reads <code>.db</code> (SQLite database) files
+        for restore purposes</li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- 7. Permissions -->
+  <!-- ═══════════════════════════════════════════ -->
+  <h2>7. Permissions</h2>
+  <div class="section-box">
+    <table>
+      <tr>
+        <th>Permission</th>
+        <th>Used For</th>
+        <th>Required On</th>
+      </tr>
+      <tr>
+        <td><code>WRITE_EXTERNAL_STORAGE</code></td>
+        <td>Save backup files to Downloads folder</td>
+        <td>Android 9 and below only</td>
+      </tr>
+      <tr>
+        <td><code>READ_EXTERNAL_STORAGE</code></td>
+        <td>Read backup files for restore</td>
+        <td>Android 9 and below only</td>
+      </tr>
+      <tr>
+        <td><code>INTERNET</code></td>
+        <td>Google Drive backup &amp; AdMob ads</td>
+        <td>All versions</td>
+      </tr>
+    </table>
+
+    <div class="highlight-box">
+      <strong>Android 10+ (SDK 29+):</strong> No storage permission is needed.
+      The app uses app-specific external storage which Android grants
+      automatically — fully Play Store compliant.
+    </div>
+
+    <p>Permissions we do <strong>NOT</strong> request:</p>
+    <ul class="do-not-list">
+      <li>MANAGE_EXTERNAL_STORAGE (not Play Store safe — we don't use it)</li>
+      <li>READ_MEDIA_IMAGES / READ_MEDIA_VIDEO (not needed)</li>
+      <li>CAMERA, CONTACTS, LOCATION, MICROPHONE (not used)</li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- 8. Data Sharing -->
+  <!-- ═══════════════════════════════════════════ -->
+  <h2>8. Data Sharing</h2>
+  <div class="section-box">
+    <p>
+      We do <strong>not</strong> share your personal financial data
+      with any third parties.
+    </p>
+    <p>The only external data flows are:</p>
+    <ul>
+      <li><strong>Google Drive</strong> — only if you opt in to cloud backup,
+        stored in your own private Google Drive folder</li>
+      <li><strong>Google AdMob</strong> — anonymous ad serving data only
+        (no financial data)</li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- 9. Data Security -->
+  <!-- ═══════════════════════════════════════════ -->
+  <h2>9. Data Security</h2>
+  <div class="section-box">
+    <p>
+      Your financial data is stored <strong>locally on your device</strong>
+      or in your own Google Drive account.
+    </p>
+    <ul>
+      <li>Backup files are standard SQLite <code>.db</code> files</li>
+      <li>Your device's built-in security (screen lock, encryption)
+        protects backup files</li>
+      <li>We recommend keeping backup files in a secure location</li>
+      <li>No account or login is required to use the app</li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- 10. Third-Party Packages -->
+  <!-- ═══════════════════════════════════════════ -->
+  <h2>10. Third-Party Packages Used</h2>
+  <div class="section-box">
+    <table>
+      <tr>
+        <th>Package</th>
+        <th>Purpose</th>
+        <th>Data Sent Externally</th>
+      </tr>
+      <tr>
+        <td>path_provider</td>
+        <td>Find device storage paths</td>
+        <td>None</td>
+      </tr>
+      <tr>
+        <td>permission_handler</td>
+        <td>Request storage permission</td>
+        <td>None</td>
+      </tr>
+      <tr>
+        <td>file_picker</td>
+        <td>Let user select backup file</td>
+        <td>None</td>
+      </tr>
+      <tr>
+        <td>device_info_plus</td>
+        <td>Detect Android SDK version</td>
+        <td>None</td>
+      </tr>
+      <tr>
+        <td>package_info_plus</td>
+        <td>Read app version for backup metadata</td>
+        <td>None</td>
+      </tr>
+      <tr>
+        <td>google_sign_in</td>
+        <td>Google Drive authentication</td>
+        <td>Google only (if opted in)</td>
+      </tr>
+      <tr>
+        <td>googleapis</td>
+        <td>Google Drive backup storage</td>
+        <td>Google only (if opted in)</td>
+      </tr>
+      <tr>
+        <td>google_mobile_ads</td>
+        <td>Display advertisements</td>
+        <td>Google AdMob</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- 11. User Control -->
+  <!-- ═══════════════════════════════════════════ -->
+  <h2>11. User Control</h2>
+  <div class="section-box">
+    <p>You have complete control over your data:</p>
+    <ul class="can-list">
+      <li>View all backup files from within the app</li>
+      <li>Delete any backup file at any time</li>
+      <li>Restore from any previous backup</li>
+      <li>Access backup files directly via your device's file manager</li>
+      <li>Copy backup files to another device manually</li>
+      <li>Delete all data by uninstalling the app</li>
+      <li>Revoke Google Drive access anytime from Google Account settings</li>
+      <li>No account required — no login, no sign-up, no email needed</li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- 12. Data Retention -->
+  <!-- ═══════════════════════════════════════════ -->
+  <h2>12. Data Retention</h2>
+  <div class="section-box">
+    <ul>
+      <li>Backup files are kept on your device until <strong>you delete them</strong></li>
+      <li>The app automatically keeps the last <strong>10 manual backups</strong>
+        and removes older ones</li>
+      <li>Uninstalling the app removes app data, but backup files saved in the
+        Downloads folder remain on your device (Android)</li>
+      <li>You can delete all backups manually from within the app or via
+        your device's file manager</li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- 13. Children's Privacy -->
+  <!-- ═══════════════════════════════════════════ -->
+  <h2>13. Children's Privacy</h2>
+  <div class="section-box">
+    <p>
+      Rokad Flow is not intended for children under the age of
+      <strong>13</strong>. We do not knowingly collect any personal
+      information from children. If you believe a child has used the app,
+      please contact us and we will take appropriate action.
+    </p>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- 14. Changes to This Policy -->
+  <!-- ═══════════════════════════════════════════ -->
+  <h2>14. Changes to This Policy</h2>
+  <div class="section-box">
+    <p>
+      We may update this Privacy Policy from time to time. Any changes will
+      be reflected by updating the <strong>"Last Updated"</strong> date at
+      the top of this page.
+    </p>
+    <p>
+      We encourage you to review this policy periodically. Continued use of
+      the app after changes constitutes your acceptance of the updated policy.
+    </p>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- 15. Contact -->
+  <!-- ═══════════════════════════════════════════ -->
+  <h2>15. Contact Us</h2>
+  <div class="contact-box">
+    <p>If you have any questions about this Privacy Policy or how we
+      handle your data, please contact us:</p>
+    <br>
+    <p>📧 <strong>Email:</strong>
+      <a href="mailto:shaanisoftsolutions@gmail.com">
+        shaanisoftsolutions@gmail.com
+      </a>
+    </p>
+    <p>📱 <strong>App:</strong> Rokad Flow — Google Play Store</p>
+    <p>👤 <strong>Developer:</strong> Shaani Soft Solutions</p>
+  </div>
+
+  <footer>
+    <p>
+      This privacy policy applies to the Rokad Flow Android and iOS
+      applications. &copy; 2025 Shaani Soft Solutions. All rights reserved.
+    </p>
+  </footer>
 
 </body>
 </html>
