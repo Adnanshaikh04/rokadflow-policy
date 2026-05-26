@@ -221,69 +221,115 @@
     </table>
   </div>
 
-  <!-- ═══════════════════════════════════════════ -->
-  <!-- 3. Backup Feature -->
-  <!-- ═══════════════════════════════════════════ -->
-  <h2>3. Backup &amp; Restore Feature</h2>
-  <div class="section-box">
+<!-- ═══════════════════════════════════════════ -->
+<!-- 3. Backup & Restore Feature -->
+<!-- ═══════════════════════════════════════════ -->
+<h2>3. Backup &amp; Restore Feature</h2>
 
-    <h3>3.1 Local Backup</h3>
-    <p>
-      All backups are created <strong>entirely on your device</strong>.
-      No data is sent to any server, cloud service, or third party.
-    </p>
-    <p>Backup files are saved to:</p>
-    <div class="highlight-box">
-      <code>
+<div class="section-box">
+
+  <!-- 3.1 Offline Backup -->
+  <h3>3.1 Offline Backup</h3>
+
+  <p>
+    Offline backups are created entirely on your device.
+    No data is sent to any server, cloud service, or third party.
+  </p>
+
+  <p>
+    Offline backups are stored in the app-specific storage directory:
+  </p>
+
+  <div class="highlight-box">
+    <code>
 Android 10+ (SDK 29+) :
   /Android/data/com.shaani.rokadflow/files/backups/
-  (No special permission required)
 
 Android 9 and below (SDK 28-) :
   /storage/emulated/0/Download/RokadFlow/backups/
-  (WRITE_EXTERNAL_STORAGE permission used)
 
 iOS :
   App Documents folder
-  (Accessible via Files app)
-      </code>
-    </div>
-
-    <h3>3.2 Restore Feature</h3>
-    <p>
-      Restore reads a <code>.db</code> backup file
-      <strong>from your device only</strong>. You can select any
-      <code>.db</code> backup file using the system file picker.
-      No internet connection is required or used during restore.
-    </p>
-    <p>
-      Before every restore, the app automatically creates a
-      <strong>safety pre-restore backup</strong> so your current data
-      is never lost.
-    </p>
-
-    <h3>3.3 Backup File Management</h3>
-    <ul>
-      <li>The app keeps the last <strong>10 manual backups</strong>
-        and auto-deletes older ones</li>
-      <li>Auto-backup creates a single overwritten file
-        (no storage waste)</li>
-      <li>You can view, restore, or delete any backup from within the app</li>
-      <li>Backup files remain on your device even after uninstalling
-        the app (Android Downloads folder)</li>
-    </ul>
-
-    <h3>3.4 What We Do NOT Do</h3>
-    <ul class="do-not-list">
-      <li>We do NOT upload your data to any server</li>
-      <li>We do NOT access your backups remotely</li>
-      <li>We do NOT share your financial data with anyone</li>
-      <li>We do NOT use your data for analytics or advertising</li>
-      <li>We do NOT sell your data</li>
-      <li>We do NOT request MANAGE_EXTERNAL_STORAGE permission</li>
-    </ul>
-
+    </code>
   </div>
+
+  <ul>
+    <li>Android 10+ app-specific backups may be deleted when the app is uninstalled</li>
+    <li>Android 9 and below backups stored in Downloads may remain after uninstall</li>
+    <li>No internet connection is required</li>
+    <li>No data is uploaded externally</li>
+  </ul>
+
+  <!-- 3.2 Export Database -->
+  <h3>3.2 Export Database</h3>
+
+  <p>
+    The app also provides an optional <strong>Export Database</strong> feature.
+  </p>
+
+  <p>
+    Export Database allows users to save a copy of their financial database
+    to any folder they choose using the system file picker.
+  </p>
+
+  <div class="highlight-box">
+    <code>
+Examples:
+  Downloads/
+  Documents/
+  SD Card/
+  USB Storage/
+  Custom user-selected folders
+    </code>
+  </div>
+
+  <ul>
+    <li>Exported files are stored only in locations selected by the user</li>
+    <li>Exported files are not uploaded to our servers</li>
+    <li>Exported database files usually remain available even after uninstalling the app</li>
+    <li>No automatic file access occurs without user interaction</li>
+    <li>The app uses Android Storage Access Framework for secure user-controlled file access</li>
+  </ul>
+
+  <!-- 3.3 Restore Feature -->
+  <h3>3.3 Restore Feature</h3>
+
+  <p>
+    Restore reads a <code>.db</code> backup file
+    from your device only.
+  </p>
+
+  <ul>
+    <li>You can select any compatible <code>.db</code> backup file</li>
+    <li>No internet connection is required during restore</li>
+    <li>Before every restore, the app automatically creates a safety backup</li>
+    <li>No data is uploaded externally during restore</li>
+  </ul>
+
+  <!-- 3.4 Backup File Management -->
+  <h3>3.4 Backup File Management</h3>
+
+  <ul>
+    <li>The app keeps the last <strong>10 manual backups</strong> and removes older ones automatically</li>
+    <li>Auto-backup creates a single overwritten file to reduce storage usage</li>
+    <li>You can view, restore, export, or delete backups from within the app</li>
+    <li>Offline app-specific backups on Android 10+ may be removed when the app is uninstalled</li>
+    <li>Exported database files saved to shared storage usually remain available after uninstall</li>
+  </ul>
+
+  <!-- 3.5 What We Do NOT Do -->
+  <h3>3.5 What We Do NOT Do</h3>
+
+  <ul class="do-not-list">
+    <li>We do NOT upload your financial data to our servers</li>
+    <li>We do NOT access your backups remotely</li>
+    <li>We do NOT share your financial data with third parties</li>
+    <li>We do NOT use your financial data for advertising or analytics</li>
+    <li>We do NOT sell your financial data</li>
+    <li>We do NOT request MANAGE_EXTERNAL_STORAGE permission</li>
+  </ul>
+
+</div>
 
   <!-- ═══════════════════════════════════════════ -->
   <!-- 4. Google Drive Backup -->
@@ -341,23 +387,27 @@ iOS :
         Tracking → Disable</li>
     </ul>
   </div>
+<!-- ═══════════════════════════════════════════ -->
+<!-- 6. File Access -->
+<!-- ═══════════════════════════════════════════ -->
+<h2>6. File Access</h2>
 
-  <!-- ═══════════════════════════════════════════ -->
-  <!-- 6. File Access -->
-  <!-- ═══════════════════════════════════════════ -->
-  <h2>6. File Access</h2>
-  <div class="section-box">
-    <p>
-      The app allows users to <strong>manually select</strong> backup files
-      using the system file picker (Storage Access Framework).
-    </p>
-    <ul>
-      <li>No files are accessed without explicit user action</li>
-      <li>File access is limited to the selected backup file only</li>
-      <li>The app only reads <code>.db</code> (SQLite database) files
-        for restore purposes</li>
-    </ul>
-  </div>
+<div class="section-box">
+
+  <p>
+    The app allows users to manually select backup files
+    using the system file picker (Storage Access Framework).
+  </p>
+
+  <ul>
+    <li>No files are accessed without explicit user action</li>
+    <li>File access is limited to user-selected files only</li>
+    <li>The app only reads compatible <code>.db</code> SQLite database files for restore purposes</li>
+    <li>The app can create export files only after the user selects a destination location</li>
+    <li>No hidden background file scanning occurs</li>
+  </ul>
+
+</div>
 
   <!-- ═══════════════════════════════════════════ -->
   <!-- 7. Permissions -->
@@ -387,12 +437,21 @@ iOS :
       </tr>
     </table>
 
-    <div class="highlight-box">
-      <strong>Android 10+ (SDK 29+):</strong> No storage permission is needed.
-      The app uses app-specific external storage which Android grants
-      automatically — fully Play Store compliant.
-    </div>
+  <div class="highlight-box">
 
+  <strong>Android 10+ (SDK 29+):</strong>
+  No broad storage permission is needed.
+  The app uses app-specific storage and Android's
+  Storage Access Framework, which are fully compliant
+  with Google Play policies.
+
+  <br><br>
+
+  <strong>Export Database:</strong>
+  Users manually choose where exported database files
+  are saved using the system file picker.
+
+</div>
     <p>Permissions we do <strong>NOT</strong> request:</p>
     <ul class="do-not-list">
       <li>MANAGE_EXTERNAL_STORAGE (not Play Store safe — we don't use it)</li>
@@ -512,18 +571,40 @@ iOS :
   <!-- ═══════════════════════════════════════════ -->
   <!-- 12. Data Retention -->
   <!-- ═══════════════════════════════════════════ -->
-  <h2>12. Data Retention</h2>
-  <div class="section-box">
-    <ul>
-      <li>Backup files are kept on your device until <strong>you delete them</strong></li>
-      <li>The app automatically keeps the last <strong>10 manual backups</strong>
-        and removes older ones</li>
-      <li>Uninstalling the app removes app data, but backup files saved in the
-        Downloads folder remain on your device (Android)</li>
-      <li>You can delete all backups manually from within the app or via
-        your device's file manager</li>
-    </ul>
-  </div>
+<!-- ═══════════════════════════════════════════ -->
+<!-- 12. Data Retention -->
+<!-- ═══════════════════════════════════════════ -->
+<h2>12. Data Retention</h2>
+
+<div class="section-box">
+
+  <ul>
+    <li>Backup files remain on your device until you delete them</li>
+
+    <li>
+      The app automatically keeps the last
+      <strong>10 manual backups</strong>
+      and removes older ones
+    </li>
+
+    <li>
+      Uninstalling the app may remove app-specific offline backups
+      on Android 10+
+    </li>
+
+    <li>
+      Exported database files saved to shared storage locations
+      selected by the user usually remain available after uninstall
+    </li>
+
+    <li>
+      Users can manually delete backups at any time
+      using the app or device file manager
+    </li>
+
+  </ul>
+
+</div>
 
   <!-- ═══════════════════════════════════════════ -->
   <!-- 13. Children's Privacy -->
