@@ -410,55 +410,131 @@ Examples:
 </div>
 
   <!-- ═══════════════════════════════════════════ -->
-  <!-- 7. Permissions -->
-  <!-- ═══════════════════════════════════════════ -->
-  <h2>7. Permissions</h2>
-  <div class="section-box">
-    <table>
-      <tr>
-        <th>Permission</th>
-        <th>Used For</th>
-        <th>Required On</th>
-      </tr>
-      <tr>
-        <td><code>WRITE_EXTERNAL_STORAGE</code></td>
-        <td>Save backup files to Downloads folder</td>
-        <td>Android 9 and below only</td>
-      </tr>
-      <tr>
-        <td><code>READ_EXTERNAL_STORAGE</code></td>
-        <td>Read backup files for restore</td>
-        <td>Android 9 and below only</td>
-      </tr>
-      <tr>
-        <td><code>INTERNET</code></td>
-        <td>Google Drive backup &amp; AdMob ads</td>
-        <td>All versions</td>
-      </tr>
-    </table>
+<!-- 7. Permissions -->
+<!-- ═══════════════════════════════════════════ -->
+<h2>7. Permissions</h2>
+
+<div class="section-box">
+
+  <table>
+    <tr>
+      <th>Permission</th>
+      <th>Used For</th>
+      <th>Required On</th>
+    </tr>
+
+    <tr>
+      <td><code>WRITE_EXTERNAL_STORAGE</code></td>
+      <td>Save backup files to Downloads folder</td>
+      <td>Android 9 and below only</td>
+    </tr>
+
+    <tr>
+      <td><code>READ_EXTERNAL_STORAGE</code></td>
+      <td>Read backup database files for restore operations</td>
+      <td>Android 9 and below only</td>
+    </tr>
+
+    <tr>
+      <td><code>MANAGE_EXTERNAL_STORAGE</code></td>
+      <td>
+        Allow users to export, manage, restore, and access
+        database backup files from device storage locations
+        selected by the user
+      </td>
+      <td>Android 11+ only</td>
+    </tr>
+
+    <tr>
+      <td><code>INTERNET</code></td>
+      <td>Google Drive backup synchronization and AdMob ads</td>
+      <td>All Android versions</td>
+    </tr>
+
+    <tr>
+      <td><code>ACCESS_NETWORK_STATE</code></td>
+      <td>Detect internet connectivity for cloud backup and ads</td>
+      <td>All Android versions</td>
+    </tr>
+
+  </table>
 
   <div class="highlight-box">
 
-  <strong>Android 10+ (SDK 29+):</strong>
-  No broad storage permission is needed.
-  The app uses app-specific storage and Android's
-  Storage Access Framework, which are fully compliant
-  with Google Play policies.
+    <strong>Storage Access &amp; Backup Management</strong>
 
-  <br><br>
+    <p>
+      Rokad Flow allows users to create, export, restore,
+      and manage SQLite database backup files directly
+      on their device.
+    </p>
 
-  <strong>Export Database:</strong>
-  Users manually choose where exported database files
-  are saved using the system file picker.
+    <p>
+      Users can manually choose backup export locations,
+      including:
+    </p>
+
+    <code>
+Downloads/
+Documents/
+SD Card/
+USB Storage/
+Custom user-selected folders
+    </code>
+
+    <br><br>
+
+    <p>
+      The app uses Android storage APIs and system file picker
+      functionality to allow user-controlled backup management.
+    </p>
+
+    <ul>
+      <li>No hidden background file scanning occurs</li>
+      <li>No unrelated personal files are accessed</li>
+      <li>No financial data is uploaded to our servers</li>
+      <li>All backup operations are initiated manually by the user</li>
+      <li>Users remain fully in control of exported files</li>
+    </ul>
+
+  </div>
+
+  <div class="highlight-box">
+
+    <strong>Android 10+ (SDK 29+)</strong>
+
+    <p>
+      On modern Android versions, the app primarily uses:
+    </p>
+
+    <ul>
+      <li>App-specific storage directories</li>
+      <li>Android Storage Access Framework (SAF)</li>
+      <li>User-selected file access</li>
+    </ul>
+
+    <p>
+      These methods provide secure and privacy-focused
+      backup management compliant with Android storage policies.
+    </p>
+
+  </div>
+
+  <p>Permissions we do <strong>NOT</strong> request:</p>
+
+  <ul class="do-not-list">
+    <li>READ_MEDIA_IMAGES</li>
+    <li>READ_MEDIA_VIDEO</li>
+    <li>READ_MEDIA_AUDIO</li>
+    <li>CAMERA</li>
+    <li>CONTACTS</li>
+    <li>LOCATION</li>
+    <li>MICROPHONE</li>
+    <li>SMS</li>
+    <li>CALL_LOG</li>
+  </ul>
 
 </div>
-    <p>Permissions we do <strong>NOT</strong> request:</p>
-    <ul class="do-not-list">
-      <li>MANAGE_EXTERNAL_STORAGE (not Play Store safe — we don't use it)</li>
-      <li>READ_MEDIA_IMAGES / READ_MEDIA_VIDEO (not needed)</li>
-      <li>CAMERA, CONTACTS, LOCATION, MICROPHONE (not used)</li>
-    </ul>
-  </div>
 
   <!-- ═══════════════════════════════════════════ -->
   <!-- 8. Data Sharing -->
