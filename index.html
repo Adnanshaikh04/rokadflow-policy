@@ -218,6 +218,11 @@
         <td>Local backup copies of your data</td>
         <td>Device storage only</td>
       </tr>
+      <tr>
+  <td>Security preferences</td>
+  <td>App lock and authentication settings</td>
+  <td>Device secure storage only</td>
+</tr>
     </table>
   </div>
 
@@ -435,15 +440,17 @@ Examples:
       <td>Android 9 and below only</td>
     </tr>
 
-    <tr>
-      <td><code>MANAGE_EXTERNAL_STORAGE</code></td>
-      <td>
-        Allow users to export, manage, restore, and access
-        database backup files from device storage locations
-        selected by the user
-      </td>
-      <td>Android 11+ only</td>
-    </tr>
+   <tr>
+  <td><code>USE_BIOMETRIC</code></td>
+  <td>Enable optional biometric authentication for App Lock security</td>
+  <td>Supported Android devices</td>
+</tr>
+
+<tr>
+  <td><code>USE_FINGERPRINT</code></td>
+  <td>Enable fingerprint authentication on older Android devices</td>
+  <td>Older Android versions only</td>
+</tr>
 
     <tr>
       <td><code>INTERNET</code></td>
@@ -571,6 +578,24 @@ Custom user-selected folders
       <li>No account or login is required to use the app</li>
     </ul>
   </div>
+  <h3>9.1 Biometric Authentication (Optional)</h3>
+
+<p>
+  Rokad Flow provides an optional App Lock feature that allows users
+  to protect access to the application using biometric authentication,
+  such as fingerprint or facial recognition, depending on device support.
+</p>
+
+<ul>
+  <li>Biometric data is never collected, stored, or transmitted by Rokad Flow.</li>
+  <li>Authentication is performed entirely by the operating system
+      using Android or iOS secure biometric frameworks.</li>
+  <li>The app only receives a success or failure result from the device.</li>
+  <li>We do not have access to your fingerprint, face scan,
+      biometric templates, or any biometric identifiers.</li>
+  <li>Biometric authentication can be enabled or disabled at any time
+      from the app settings.</li>
+</ul>
 
   <!-- ═══════════════════════════════════════════ -->
   <!-- 10. Third-Party Packages -->
@@ -623,6 +648,17 @@ Custom user-selected folders
         <td>Display advertisements</td>
         <td>Google AdMob</td>
       </tr>
+      <tr>
+  <td>local_auth</td>
+  <td>Biometric authentication (Fingerprint / Face Unlock)</td>
+  <td>None</td>
+</tr>
+
+<tr>
+  <td>flutter_secure_storage</td>
+  <td>Securely store app security preferences and encryption keys</td>
+  <td>None</td>
+</tr>
     </table>
   </div>
 
